@@ -1,15 +1,168 @@
 <!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+</html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Weather app</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/aa388e8702.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <h1>Hello Git</h1>
-    <script src = "script.js"></script>
-    </script>
+    <div class="container">
+      <h1 id="city"></h1>
+      <h2 id="date"></h2>
+      <form id="search-form">
+        <div class="row left">
+          <div class="col-4">
+            <input
+              type="city"
+              class="form-control"
+              placeholder="enter your city"
+              autocomplete="off"
+              autofocus="on"
+              id="search-input"
+            />
+            <input
+              type="submit"
+              class="form-control"
+              value="search"
+              style="background-color: #dbe2ed"
+            />
+
+            <input
+              type="submit"
+              class="form-control"
+              value="current"
+              style="background-color: #dbe2ed"
+              id="current"
+            />
+          </div>
+        </div>
+      </form>
+      <p></p>
+      <div class="card-weather" style="width: fit-content">
+        <div class="card-body text">
+          <ul>
+            <li>
+              <img
+                src="https://cdn.icon-icons.com/icons2/2533/PNG/512/sun_weather_icon_152003.png"
+                alt="sunny"
+                width="200px"
+              />
+            </li>
+
+            <li>
+              <span class="description" id="description"> sunny </span>
+            </li>
+            <li>
+              <span class="temperature" id="temperature"> 22 </span>
+              <span class="units">
+                <a href="#" ; class="link" id="celsius-link"> ºC </a>
+                <a href="#" ; class="link" id="fahrenheit-link">ºF </a>
+              </span>
+            </li>
+            <li id="precipitation">Precipitation 0%</li>
+            <li id="humidity">Humidity 77%</li>
+            <li id="wind">Wind 27 km/h</li>
+          </ul>
+          <br />
+        </div>
+      </div>
+      <div class="clearfix">
+        <div class="row forecast">
+          <div class="col">
+            SAT
+            <img
+              src="https://cdn.icon-icons.com/icons2/2533/PNG/512/rain_weather_icon_151998.png"
+              alt="rainny"
+              width="40px"
+              height="40px"
+              class="float"
+            />
+            <p>23</p>
+          </div>
+          <div class="col">
+            SUN
+            <img
+              src="images/mostly-sunny.png"
+              alt="rainny"
+              width="40px"
+              height="40px"
+              class="float"
+            />
+            <p>24</p>
+          </div>
+          <div class="col">
+            MON
+            <img
+              src="https://cdn.icon-icons.com/icons2/2533/PNG/512/rain_weather_icon_151998.png"
+              alt="rainny"
+              width="40px"
+              height="40px"
+              class="float"
+            />
+            <p>23</p>
+          </div>
+          <div class="col">
+            TUE
+            <img
+              src="https://cdn.icon-icons.com/icons2/2533/PNG/512/rain_weather_icon_151998.png"
+              alt="rainny"
+              width="40px"
+              height="40px"
+              class="float"
+            />
+            <p>24</p>
+          </div>
+          <div class="col">
+            WED
+            <img
+              src="images/mostly-sunny.png"
+              alt="rainny"
+              width="40px"
+              height="40px"
+              class="float"
+            />
+            <p>22</p>
+          </div>
+          <div class="col">
+            THU
+            <img
+              src="images/mostly-sunny.png"
+              alt="rainny"
+              width="40px"
+              height="40px"
+              class="float"
+            />
+            <p>22</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </body>
 </html>
