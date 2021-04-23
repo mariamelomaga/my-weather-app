@@ -33,8 +33,8 @@ ul {
 }
 .card-weather {
   position: relative;
-  left: 102px;
-  top: -60px;
+  left: 157px;
+  margin-top: 100px;
   border: none;
   font-weight: 100;
   text-align: center;
@@ -54,17 +54,14 @@ ul {
 .left {
   position: relative;
   left: 380px;
-  top: -100px;
+  top: -130px;
   padding-top: 50px;
 }
 .forecast {
   position: relative;
   left: 20px;
 }
-.description {
+.sunny {
   font-size: 30px;
   font-weight: bolder;
-}
-.current {
-  margin-top: 22px;
 }
