@@ -12,7 +12,6 @@ h2 {
 ul {
   list-style: none;
 }
-
 .container {
   background: #dddddd;
   padding: 35px;
@@ -64,4 +63,22 @@ ul {
 .sunny {
   font-size: 30px;
   font-weight: bolder;
+}
+.float-left {
+  margin-right: 10px;
+}
+.current-location {
+  background: transparent;
+}
+.location-icon {
+  color: darkgray;
+  font-size: 25px;
+}
+.current-location-button {
+  background: #dddddd;
+  border: none;
+  padding-top: 7px;
+}
+button:hover {
+  cursor: grab;
 }
