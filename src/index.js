@@ -1,4 +1,16 @@
-function formatDate(date) {
+// timestamp is number of miliseconds that has happen since 1970 - that's how JS works.
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hour = date.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
   let days = [
     "Sunday",
     "Monday",
@@ -8,26 +20,12 @@ function formatDate(date) {
     "Friday",
     "Saturday",
   ];
-  let day = days[currentTime.getDay()];
-  let hour = currentTime.getHours();
 
-  if (hour < 10) {
-    hour = `0${hour}`;
-  }
-  let minutes = currentTime.getMinutes();
-
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
+  let day = days[date.getDay()];
   return `${day} ${hour} : ${minutes}`;
 }
 
-let currentTime = new Date();
-let h2 = document.querySelector("#date");
-h2.innerHTML = formatDate(currentTime);
-
 function displayWeather(response) {
-  console.log(response.data.name);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -38,6 +36,8 @@ function displayWeather(response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+  let h2 = document.querySelector("#date");
+  h2.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 // display by default a city , on load!
