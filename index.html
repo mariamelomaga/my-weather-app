@@ -25,8 +25,20 @@
   </head>
   <body>
     <div class="container">
+      <form>
+        <div class="col-4">
+          <button class="current-location-button">
+            <i
+              class="fas fa-map-marker-alt location-icon"
+              id="current-location-button"
+            ></i>
+          </button>
+        </div>
+      </form>
       <h1 id="city"></h1>
       <h2>Last updated:<span id="date"></span></h2>
+
+      <br />
       <form id="search-form">
         <div class="row">
           <div class="col-4">
@@ -37,27 +49,27 @@
               autocomplete="off"
               autofocus="on"
               id="city-input"
+              style="margin-left: 370px; margin-top: -90px"
             />
           </div>
-          <div class="col-3">
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-4">
             <input
               type="submit"
               class="form-control"
               value="search"
-              style="background-color: #dbe2ed"
+              style="
+                background-color: #a9a9a9;
+                margin-left: 370px;
+                margin-top: -70px;
+              "
             />
-          </div>
-          <div class="col-4">
-            <button class="current-location-button">
-              <i
-                class="fas fa-map-marker-alt location-icon"
-                id="current-location-button"
-              ></i>
-            </button>
           </div>
         </div>
       </form>
-      <div class="card-weather" style="width: fit-content">
+      <div class="card-weather">
         <div class="card-body text">
           <ul>
             <li>
@@ -150,7 +162,7 @@
         >
         by Maria Melo
       </small>
-      <script src="src/index.js"></script>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>

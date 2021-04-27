@@ -22,7 +22,7 @@ function formatDate(timestamp) {
   ];
 
   let day = days[date.getDay()];
-  return `${day} ${hour} : ${minutes}`;
+  return `${day} ${hour}:${minutes}`;
 }
 
 function displayWeather(response) {
@@ -36,8 +36,9 @@ function displayWeather(response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
-  let h2 = document.querySelector("#date");
-  h2.innerHTML = formatDate(response.data.dt * 1000);
+  document.querySelector("#date").innerHTML = formatDate(
+    response.data.dt * 1000
+  );
 }
 
 // display by default a city , on load!
