@@ -18,7 +18,7 @@ header {
 footer {
   color: darkgray;
   position: relative;
-  margin-left: 220px;
+  margin-left: 430px;
   margin-top: -20px;
 }
 
@@ -29,19 +29,16 @@ footer {
   margin-left: 110px;
   margin-top: 50px;
   display: block;
-  margin: 20px auto;
+  margin: 15px auto;
   max-width: 600px;
 }
-.card-weather {
-  position: relative;
-  margin-top: 40px;
-  border: none;
-  font-weight: 100;
+.overview {
+  margin-top: 20px;
   text-align: center;
   font-size: 12px;
 }
 .temperature {
-  font-size: 34px;
+  font-size: 40px;
   font-weight: bolder;
 }
 .link {
@@ -51,17 +48,14 @@ footer {
   position: relative;
   font-size: 15px;
 }
-.text {
-  padding-top: 1px;
-}
 
+.sunny {
+  font-size: 25px;
+  font-weight: bolder;
+}
 .forecast {
   position: relative;
   left: 20px;
-}
-.sunny {
-  font-size: 30px;
-  font-weight: bolder;
 }
 .float-left {
   margin-right: 10px;
