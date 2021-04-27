@@ -12,6 +12,16 @@ h2 {
 ul {
   list-style: none;
 }
+header {
+  margin-top: 30px;
+}
+footer {
+  color: darkgray;
+  position: relative;
+  margin-left: 220px;
+  margin-top: -20px;
+}
+
 .container {
   background: #dddddd;
   padding: 35px;
@@ -19,7 +29,7 @@ ul {
   margin-left: 110px;
   margin-top: 50px;
   display: block;
-  margin-top: 30px;
+  margin: 20px auto;
   max-width: 600px;
 }
 .card-weather {
@@ -68,7 +78,11 @@ ul {
   border: none;
   padding-top: 7px;
   margin-left: 370px;
+  margin-top: -20px;
 }
 button:hover {
   cursor: grab;
+}
+.gitLink {
+  color: black;
 }

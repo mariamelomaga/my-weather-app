@@ -28,6 +28,7 @@
       <form>
         <div class="col-4">
           <button class="current-location-button">
+            Here
             <i
               class="fas fa-map-marker-alt location-icon"
               id="current-location-button"
@@ -35,9 +36,10 @@
           </button>
         </div>
       </form>
-      <h1 id="city"></h1>
-      <h2>Last updated:<span id="date"></span></h2>
-
+      <header class="header">
+        <h1 id="city"></h1>
+        <h2>Last updated:<span id="date"></span></h2>
+      </header>
       <br />
       <form id="search-form">
         <div class="row">
@@ -45,11 +47,11 @@
             <input
               type="search"
               class="form-control"
-              placeholder="enter your city"
+              placeholder="type city"
               autocomplete="off"
               autofocus="on"
               id="city-input"
-              style="margin-left: 370px; margin-top: -90px"
+              style="margin-left: 370px; margin-top: -110px"
             />
           </div>
         </div>
@@ -63,7 +65,7 @@
               style="
                 background-color: #a9a9a9;
                 margin-left: 370px;
-                margin-top: -70px;
+                margin-top: -90px;
               "
             />
           </div>
@@ -153,16 +155,19 @@
           </div>
         </div>
       </div>
+    </div>
+    <footer>
       <small>
         <a
           href="https://github.com/mariamelomaga/my-weather-app"
           target="_blank"
+          class="gitLink"
         >
           Open-source code on GitHub</a
         >
         by Maria Melo
       </small>
-    </div>
+    </footer>
     <script src="src/index.js"></script>
   </body>
 </html>
