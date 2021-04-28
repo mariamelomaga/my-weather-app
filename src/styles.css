@@ -6,11 +6,12 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 15px;
   color: black;
 }
 ul {
   list-style: none;
+  text-align: left;
 }
 header {
   margin-top: 30px;
@@ -32,25 +33,23 @@ footer {
   margin: 15px auto;
   max-width: 600px;
 }
-.overview {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 12px;
-}
 .temperature {
   font-size: 40px;
   font-weight: bolder;
 }
 .link {
-  color: darkgray;
+  color: black;
+}
+.weather-temperature img {
+  height: 30px;
+  width: 30px;
 }
 .units {
-  position: relative;
-  font-size: 15px;
+  font-size: 20px;
 }
 
-.sunny {
-  font-size: 25px;
+.description {
+  font-size: 20px;
   font-weight: bolder;
 }
 .forecast {
@@ -65,14 +64,15 @@ footer {
 }
 .location-icon {
   color: darkgray;
-  font-size: 25px;
+  font-size: 20px;
 }
 .current-location-button {
   background: #dddddd;
+  position: relative;
+  top: -75px;
+  right: 30px;
   border: none;
-  padding-top: 7px;
   margin-left: 370px;
-  margin-top: -20px;
 }
 button:hover {
   cursor: grab;

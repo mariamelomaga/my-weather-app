@@ -25,22 +25,17 @@
   </head>
   <body>
     <div class="container">
-      <form>
-        <div class="col">
-          <button class="current-location-button">
-            <i
-              class="fas fa-map-marker-alt location-icon"
-              id="current-location-button"
-            ></i>
-          </button>
-          Here
-        </div>
-      </form>
       <header class="header">
         <h1 id="city"></h1>
         <h2>Last updated:<span id="date"></span></h2>
       </header>
       <br />
+      <button class="current-location-button">
+        <i
+          class="fas fa-map-marker-alt location-icon"
+          id="current-location-button"
+        ></i>
+      </button>
       <form id="search-form">
         <div class="row">
           <div class="col-4">
@@ -66,28 +61,25 @@
                 background-color: #a9a9a9;
                 margin-left: 370px;
                 margin-top: -90px;
+                padding-right: 90px;
               "
             />
           </div>
         </div>
       </form>
-
-      <ul class="overview">
-        <li>
-          <span class="sunny" id="description"></span>
-        </li>
-        <li>
-          <span class="temperature" id="temperature"></span>
-          <span class="units">
-            <a href="#" ; class="link" id="celsius-link"> ºC </a>
-            <a href="#" ; class="link" id="fahrenheit-link">ºF </a>
-          </span>
-        </li>
+      <img src="" alt="Clear" id="icon" />
+      <span class="temperature" id="temperature"></span>
+      <span class="units">
+        <a href="#" ; class="link" id="celsius-link"> ºC </a> |
+        <a href="#" ; class="link" id="fahrenheit-link">ºF </a>
+      </span>
+      <ul>
+        <li><span class="description" id="description"></span></li>
         <li>Humidity: <span id="humidity"></span>%</li>
         <li>Wind: <span id="wind"></span>km/h</li>
       </ul>
-      <br />
 
+      <br />
       <div class="clearfix">
         <div class="row forecast">
           <div class="col">
