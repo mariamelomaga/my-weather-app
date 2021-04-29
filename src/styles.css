@@ -2,20 +2,23 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 h1 {
-  font-weight: ligher;
+  font-weight: 700;
 }
 
 h2 {
   font-size: 15px;
   color: black;
 }
+h3 {
+  font-size: 15px;
+  text-align: left;
+  padding: 0;
+}
 ul {
   list-style: none;
-  text-align: left;
+  padding: 0;
 }
-header {
-  margin-top: 30px;
-}
+
 footer {
   color: darkgray;
   position: relative;
@@ -33,12 +36,20 @@ footer {
   margin: 15px auto;
   max-width: 600px;
 }
+form search-form {
+  margin-top: -60px;
+  padding: 0;
+}
 .temperature {
   font-size: 40px;
   font-weight: bolder;
 }
-.link {
+.active {
   color: black;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
 }
 .weather-temperature img {
   height: 30px;
@@ -49,8 +60,7 @@ footer {
 }
 
 .description {
-  font-size: 20px;
-  font-weight: bolder;
+  font-size: 15px;
 }
 .forecast {
   position: relative;

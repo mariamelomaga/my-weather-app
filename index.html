@@ -27,7 +27,16 @@
     <div class="container">
       <header class="header">
         <h1 id="city"></h1>
-        <h2>Last updated:<span id="date"></span></h2>
+        <h2>
+          <span id="date"></span> |
+          <span class="description" id="description"></span>
+        </h2>
+        <h3>
+          <ul>
+            <li>Humidity: <span id="humidity"></span>%</li>
+            <li>Wind: <span id="wind"></span>km/h</li>
+          </ul>
+        </h3>
       </header>
       <br />
       <button class="current-location-button">
@@ -70,14 +79,9 @@
       <img src="" alt="Clear" id="icon" />
       <span class="temperature" id="temperature"></span>
       <span class="units">
-        <a href="#" ; class="link" id="celsius-link"> ºC </a> |
-        <a href="#" ; class="link" id="fahrenheit-link">ºF </a>
+        <a href="#" class="active" id="celsius-link">ºC </a> |
+        <a href="#" id="fahrenheit-link">ºF</a>
       </span>
-      <ul>
-        <li><span class="description" id="description"></span></li>
-        <li>Humidity: <span id="humidity"></span>%</li>
-        <li>Wind: <span id="wind"></span>km/h</li>
-      </ul>
 
       <br />
       <div class="clearfix">
@@ -155,6 +159,10 @@
         >
           Open-source code on GitHub</a
         >
+
+        <a href="" target="_blank" class="netlifylink">
+          and hosted on Netlify
+        </a>
         by Maria Melo
       </small>
     </footer>
