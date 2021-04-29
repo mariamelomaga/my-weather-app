@@ -39,112 +39,78 @@
         </h3>
       </header>
       <br />
-      <button class="current-location-button">
-        <i
-          class="fas fa-map-marker-alt location-icon"
-          id="current-location-button"
-        ></i>
-      </button>
-      <form id="search-form">
-        <div class="row">
-          <div class="col-4">
-            <input
-              type="search"
-              class="form-control"
-              placeholder="type city"
-              autocomplete="off"
-              autofocus="on"
-              id="city-input"
-              style="margin-left: 370px; margin-top: -110px"
-            />
+      <section class="search-engine">
+        <button class="current-location-button">
+          <i
+            class="fas fa-map-marker-alt location-icon"
+            id="current-location-button"
+          ></i>
+        </button>
+        <form id="search-form">
+          <div class="row">
+            <div class="col-4">
+              <input
+                type="search"
+                class="form-control"
+                placeholder="type city"
+                autocomplete="off"
+                autofocus="off"
+                id="city-input"
+                style="margin-left: 370px; margin-top: -110px"
+              />
+            </div>
           </div>
-        </div>
-        <br />
-        <div class="row">
-          <div class="col-4">
-            <input
-              type="submit"
-              class="form-control"
-              value="search"
-              style="
-                background-color: #a9a9a9;
-                margin-left: 370px;
-                margin-top: -90px;
-                padding-right: 90px;
-              "
-            />
+          <br />
+          <div class="row">
+            <div class="col-4">
+              <input
+                type="submit"
+                class="form-control"
+                value="search"
+                style="
+                  background-color: #a9a9a9;
+                  margin-left: 370px;
+                  margin-top: -90px;
+                  padding-right: 90px;
+                "
+              />
+            </div>
           </div>
-        </div>
-      </form>
-      <img src="" alt="Clear" id="icon" />
-      <span class="temperature" id="temperature"></span>
-      <span class="units">
-        <a href="#" class="active" id="celsius-link">ºC </a> |
-        <a href="#" id="fahrenheit-link">ºF</a>
-      </span>
-
+        </form>
+      </section>
+      <div class="weather-temperature">
+        <img src="" class="icon-weather" id="icon" />
+        <span class="temperature" id="temperature"></span>
+        <span class="units">
+          <a href="#" class="active" id="celsius-link">ºC </a> |
+          <a href="#" id="fahrenheit-link">ºF</a>
+        </span>
+      </div>
       <br />
       <div class="clearfix">
         <div class="row forecast">
           <div class="col">
-            <img
-              src="https://cdn.icon-icons.com/icons2/2533/PNG/512/rain_weather_icon_151998.png"
-              alt="rainny"
-              width="30px"
-              height="30px"
-              class="float-left"
-            />
             SAT
             <p>23</p>
           </div>
           <div class="col">
-            <img
-              src="images/mostly-sunny.png"
-              alt="rainny"
-              width="30px"
-              height="30px"
-              class="float-left"
-            />SUN
+            SUN
             <p>24</p>
           </div>
           <div class="col">
-            <img
-              src="https://cdn.icon-icons.com/icons2/2533/PNG/512/rain_weather_icon_151998.png"
-              alt="rainny"
-              width="30px"
-              height="30px"
-              class="float-left"
-            />MON
+            MON
             <p>23</p>
           </div>
           <div class="col">
-            <img
-              src="https://cdn.icon-icons.com/icons2/2533/PNG/512/rain_weather_icon_151998.png"
-              alt="rainny"
-              width="30px"
-              height="30px"
-              class="float-left"
-            />TUE
+            TUE
             <p>24</p>
           </div>
           <div class="col">
-            <img
-              src="images/mostly-sunny.png"
-              alt="rainny"
-              width="30px"
-              height="30px"
-              class="float-left"
-            />WED
+            WED
             <p>22</p>
           </div>
           <div class="col">
-            <img
-              src="images/mostly-sunny.png"
-              alt="rainny"
-              width="30px"
-              height="30px"
-              class="float-left"
-            />THU
+            THU
             <p>22</p>
           </div>
         </div>
@@ -155,14 +121,13 @@
         <a
           href="https://github.com/mariamelomaga/my-weather-app"
           target="_blank"
-          class="gitLink"
         >
           Open-source code on GitHub</a
         >
-
-        <a href="" target="_blank" class="netlifylink">
-          and hosted on Netlify
-        </a>
+        and
+        <a href="https://priceless-colden-c88d72.netlify.app/" target="_blank">
+          hosted on Netlify</a
+        >
         by Maria Melo
       </small>
     </footer>

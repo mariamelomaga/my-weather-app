@@ -6,7 +6,7 @@ h1 {
 }
 
 h2 {
-  font-size: 15px;
+  font-size: 20px;
   color: black;
 }
 h3 {
@@ -16,7 +16,7 @@ h3 {
 }
 ul {
   list-style: none;
-  padding: 0;
+  padding: 2px;
 }
 
 footer {
@@ -36,38 +36,36 @@ footer {
   margin: 15px auto;
   max-width: 600px;
 }
-form search-form {
-  margin-top: -60px;
-  padding: 0;
+.search-engine {
+  margin-top: -80px;
 }
-.temperature {
-  font-size: 40px;
+.weather-temperature {
+  margin-top: 80px;
+}
+.weather-temperature .temperature {
+  font-size: 60px;
   font-weight: bolder;
 }
-.active {
+.weather-temperature img {
+  height: 120px;
+  width: 120px;
+}
+.weather-temperature .units {
+  font-size: 20px;
+}
+.weather-temperature .active {
   color: black;
   cursor: default;
 }
-.active:hover {
+.weather-temperature .active:hover {
   text-decoration: none;
 }
-.weather-temperature img {
-  height: 30px;
-  width: 30px;
-}
-.units {
-  font-size: 20px;
-}
-
 .description {
   font-size: 15px;
 }
 .forecast {
   position: relative;
   left: 20px;
-}
-.float-left {
-  margin-right: 10px;
 }
 .current-location {
   background: transparent;
@@ -87,6 +85,6 @@ form search-form {
 button:hover {
   cursor: grab;
 }
-.gitLink {
+a {
   color: black;
 }
