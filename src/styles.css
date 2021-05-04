@@ -25,7 +25,6 @@ footer {
   margin-left: 430px;
   margin-top: -20px;
 }
-
 .container {
   background: #dddddd;
   padding: 35px;
@@ -63,10 +62,6 @@ footer {
 .description {
   font-size: 15px;
 }
-.forecast {
-  position: relative;
-  left: 20px;
-}
 .current-location {
   background: transparent;
 }
@@ -87,4 +82,21 @@ button:hover {
 }
 a {
   color: black;
+}
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #000;
+}
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
 }
