@@ -25,25 +25,59 @@ function formatDate(timestamp) {
   return `${day} ${hour}:${minutes}`;
 }
 
-function displayForecast() {
+// convert dt to day
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
+// this function receives the response from API ONE CALL and then log the response.data from that API (inside there is an object with daily forecast)
+function displayForecast(response) {
+  console.log(response);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Thu", "Fri", "Sat", "Sun"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `  <div class="col-2">
-            <div class="weather-forecast-date">${day}</div>
-            <img src="images/cloudy.png" width="36" />
+  // we don't want to loop through array of days, but the one from response.daily
+  //let days = ["Thu", "Fri", "Sat", "Sun"]; - REMOVED and changed the days.forEach by forecast. from here we only get dt not day.
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `  <div class="col-2">
+            <div class="weather-forecast-date">${formatDay(
+              forecastDay.dt
+            )}</div>
+            <img src="http://openweathermap.org/img/wn/${
+              forecastDay.weather[0].icon
+            }@2x.png" width="36" />
             <div class="weather-forecast-temperature">
-              <span class="weather-forecast-temperature-max"> 23</span>
-              <span class="weather-forecast-temperature-min"> 12</span>
+              <span class="weather-forecast-temperature-max">${Math.round(
+                forecastDay.temp.max
+              )}</span>
+              <span class="weather-forecast-temperature-min">${Math.round(
+                forecastDay.temp.min
+              )}</span>
+            </div>
             </div>`;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
   console.log(forecastHTML);
+}
+
+//make "ONE CALL API" to get the forecast - whenever city is searched (response back from API city) will give coords of searched city needed for ONE CALL API
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "5a12dd671f298e4a72d4ec34c2cdc4ee";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayWeather(response) {
@@ -69,6 +103,8 @@ function displayWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 // display by default a city , on load!
@@ -122,7 +158,7 @@ let celsiusTemperature = null;
 
 //city on load
 search("lisbon");
-displayForecast();
+
 // current location button - with geolocation API - copy different APIurl from openweather
 
 //3
