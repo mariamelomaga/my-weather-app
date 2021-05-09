@@ -41,14 +41,16 @@
         </h3>
       </header>
       <br />
-      <section class="search-engine">
-        <button class="current-location-button">
-          <i
-            class="fas fa-map-marker-alt location-icon"
-            style="padding-bottom: 10px"
-            id="current-location-button"
-          ></i>
-        </button>
+      <div class="row search-engine">
+        <div class="col">
+          <button class="current-location-button">
+            <i
+              class="fas fa-map-marker-alt location-icon"
+              style="padding-bottom: 10px"
+              id="current-location-button"
+            ></i>
+          </button>
+        </div>
         <form id="search-form">
           <div class="row align-items-center">
             <div class="col-4">
@@ -86,7 +88,7 @@
             </div>
           </div>
         </form>
-      </section>
+      </div>
       <div class="row align-items-center">
         <div class="col">
           <div class="weather-temperature">
@@ -99,21 +101,28 @@
       <br />
       <div class="weather-forecast" id="forecast"></div>
     </div>
-    <footer>
-      <small>
-        <a
-          href="https://github.com/mariamelomaga/my-weather-app"
-          target="_blank"
-        >
-          Open-source code on GitHub</a
-        >
-        and
-        <a href="https://priceless-colden-c88d72.netlify.app/" target="_blank">
-          hosted on Netlify</a
-        >
-        by Maria Melo
-      </small>
-    </footer>
+    <div class="row">
+      <div class="col footer">
+        <footer>
+          <small>
+            <a
+              href="https://github.com/mariamelomaga/my-weather-app"
+              target="_blank"
+            >
+              Open-source code on GitHub</a
+            >
+            and
+            <a
+              href="https://priceless-colden-c88d72.netlify.app/"
+              target="_blank"
+            >
+              hosted on Netlify</a
+            >
+            by Maria Melo
+          </small>
+        </footer>
+      </div>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>

@@ -25,9 +25,8 @@ ul {
 
 footer {
   color: darkgray;
-  position: relative;
-  margin-left: 430px;
-  margin-top: -20px;
+  text-align: center;
+  border: none;
 }
 .container {
   background: #dddddd;
@@ -47,7 +46,9 @@ footer {
 .form-control {
   color: #000;
 }
-
+.form-control::placeholder {
+  color: #000;
+}
 .weather-temperature .temperature {
   font-size: 60px;
   font-weight: bolder;
@@ -78,11 +79,7 @@ footer {
 }
 .current-location-button {
   background: #dddddd;
-  position: relative;
-  top: -70px;
-  right: 30px;
   border: none;
-  margin-left: 370px;
 }
 button:hover {
   cursor: grab;
