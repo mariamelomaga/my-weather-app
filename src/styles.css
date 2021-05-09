@@ -40,8 +40,10 @@ footer {
   color: #000;
 }
 .search-engine {
-  margin-top: -25px;
+  margin-top: 25px;
   color: #000;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 .form-control {
   color: #000;
