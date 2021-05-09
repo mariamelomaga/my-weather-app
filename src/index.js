@@ -1,4 +1,3 @@
-// timestamp is number of miliseconds that has happen since 1970 - that's how JS works.
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hour = date.getHours();
@@ -33,14 +32,11 @@ function formatDay(timestamp) {
   return days[day];
 }
 
-// this function receives the response from API ONE CALL and then log the response.data from that API (inside there is an object with daily forecast)
 function displayForecast(response) {
   console.log(response);
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  // we don't want to loop through array of days, but the one from response.daily
-  //let days = ["Thu", "Fri", "Sat", "Sun"]; - REMOVED and changed the days.forEach by forecast. from here we only get dt not day.
 
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
@@ -70,8 +66,6 @@ function displayForecast(response) {
   console.log(forecastHTML);
 }
 
-//make "ONE CALL API" to get the forecast - whenever city is searched (response back from API city) will give coords of searched city needed for ONE CALL API
-
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "5a12dd671f298e4a72d4ec34c2cdc4ee";
@@ -89,7 +83,6 @@ function displayWeather(response) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
-  // this variable was created outside function- GLOBAL VARIABLE - is going to keep track of celsius whenever search/reponse from API
   celsiusTemperature = response.data.main.temp;
 
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
@@ -115,6 +108,9 @@ function search(city) {
   axios.get(apiUrl).then(displayWeather);
 }
 
+//city on load
+search("lisbon");
+
 //make an API call
 function handleSubmit(event) {
   debugger;
@@ -125,43 +121,6 @@ function handleSubmit(event) {
 let submit = document.querySelector("#search-form");
 submit.addEventListener("submit", handleSubmit);
 
-// units
-function convertCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-
-  // whenever click on C - remove active class from fahrenheit link - and add active link on C
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-function convertFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-
-  // whenever click on F - remove active class from celsius link - and add active link on F
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
-}
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertCelsius);
-
-// create variable with null - on load!
-let celsiusTemperature = null;
-
-//city on load
-search("lisbon");
-
-// current location button - with geolocation API - copy different APIurl from openweather
-
-//3
 function showLocation(position) {
   let units = "metric";
   let apiKey = "5a12dd671f298e4a72d4ec34c2cdc4ee";
@@ -169,11 +128,10 @@ function showLocation(position) {
   axios.get(apiUrl).then(displayWeather);
 }
 
-//2 we could copy this from web - "js current location"
 function currentWeatherLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showLocation);
 }
-//1
+
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", currentWeatherLocation);

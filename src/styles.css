@@ -1,13 +1,17 @@
+html {
+  min-height: 100%;
+}
 body {
   font-family: "Quicksand", sans-serif;
 }
 h1 {
   font-weight: 700;
+  font-size: 45px;
 }
 
 h2 {
-  font-size: 20px;
-  color: black;
+  font-size: 25px;
+  font-weight: 550;
 }
 h3 {
   font-size: 15px;
@@ -34,13 +38,16 @@ footer {
   display: block;
   margin: 15px auto;
   max-width: 600px;
+  color: #000;
 }
 .search-engine {
-  margin-top: -80px;
+  margin-top: -25px;
+  color: #000;
 }
-.weather-temperature {
-  margin-top: 80px;
+.form-control {
+  color: #000;
 }
+
 .weather-temperature .temperature {
   font-size: 60px;
   font-weight: bolder;
@@ -72,7 +79,7 @@ footer {
 .current-location-button {
   background: #dddddd;
   position: relative;
-  top: -75px;
+  top: -70px;
   right: 30px;
   border: none;
   margin-left: 370px;

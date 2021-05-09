@@ -10,6 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -43,11 +45,12 @@
         <button class="current-location-button">
           <i
             class="fas fa-map-marker-alt location-icon"
+            style="padding-bottom: 10px"
             id="current-location-button"
           ></i>
         </button>
         <form id="search-form">
-          <div class="row">
+          <div class="row align-items-center">
             <div class="col-4">
               <input
                 type="search"
@@ -56,12 +59,19 @@
                 autocomplete="off"
                 autofocus="off"
                 id="city-input"
-                style="margin-left: 370px; margin-top: -110px"
+                style="
+                  background-color: #f6f5f5;
+                  border: 1px solid #f6f5f5;
+                  margin-left: 370px;
+                  margin-top: -110px;
+                  border-left-width: 40px;
+                  color: #000;
+                "
               />
             </div>
           </div>
           <br />
-          <div class="row">
+          <div class="row align-items-center">
             <div class="col-4">
               <input
                 type="submit"
@@ -71,20 +81,20 @@
                   background-color: #a9a9a9;
                   margin-left: 370px;
                   margin-top: -90px;
-                  padding-right: 90px;
                 "
               />
             </div>
           </div>
         </form>
       </section>
-      <div class="weather-temperature">
-        <img src="" class="icon-weather" id="icon" />
-        <span class="temperature" id="temperature"></span>
-        <span class="units">
-          <a href="#" class="active" id="celsius-link">ºC </a> |
-          <a href="#" id="fahrenheit-link">ºF</a>
-        </span>
+      <div class="row align-items-center">
+        <div class="col">
+          <div class="weather-temperature">
+            <img src="" class="icon-weather" id="icon" />
+            <span class="temperature" id="temperature"></span>
+            <span class="units">ºC</span>
+          </div>
+        </div>
       </div>
       <br />
       <div class="weather-forecast" id="forecast"></div>
