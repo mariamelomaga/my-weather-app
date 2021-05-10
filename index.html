@@ -29,66 +29,68 @@
     <div class="container">
       <header class="header">
         <h1 id="city"></h1>
-        <h2>
-          <span id="date"></span> |
-          <span class="description" id="description"></span>
-        </h2>
-        <h3>
-          <ul>
-            <li>Humidity: <span id="humidity"></span>%</li>
-            <li>Wind: <span id="wind"></span>km/h</li>
-          </ul>
-        </h3>
-      </header>
-      <br />
-      <div class="row search-engine">
-        <div class="col">
-          <button class="current-location-button">
-            <i
-              class="fas fa-map-marker-alt location-icon"
-              style="padding-bottom: 10px"
-              id="current-location-button"
-            ></i>
-          </button>
+        <div class="row">
+          <div class="col-12 col-sm-6">
+            <h2>
+              <span id="date"></span>|
+              <span class="description" id="description"></span>
+            </h2>
+            <h3>
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span>km/h</li>
+              </ul>
+            </h3>
+          </div>
+          <div class="col-12 col-sm-6">
+            <div class="row search-engine align-items-end">
+              <div class="col-2">
+                <button class="current-location-button">
+                  <i
+                    class="fas fa-map-marker-alt location-icon"
+                    style="padding-bottom: 10px; padding-bottom: 50px"
+                    id="current-location-button"
+                  ></i>
+                </button>
+              </div>
+              <div class="col">
+                <form id="search-form">
+                  <div class="row">
+                    <div class="col-12">
+                      <input
+                        type="search"
+                        class="form-control"
+                        placeholder="type city"
+                        autocomplete="off"
+                        autofocus="off"
+                        id="city-input"
+                        style="
+                          background-color: #f6f5f5;
+                          border: 1px solid #f6f5f5;
+                          border-left-width: 40px;
+                          margin-bottom: -20px;
+                          color: #000;
+                        "
+                      />
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col-12">
+                      <input
+                        type="submit"
+                        class="form-control"
+                        value="search"
+                        style="background-color: #a9a9a9"
+                      />
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-        <form id="search-form">
-          <div class="row align-items-right">
-            <div class="col-4">
-              <input
-                type="search"
-                class="form-control"
-                placeholder="type city"
-                autocomplete="off"
-                autofocus="off"
-                id="city-input"
-                style="
-                  background-color: #f6f5f5;
-                  border: 1px solid #f6f5f5;
-                  margin-left: 370px;
-                  margin-top: -110px;
-                  border-left-width: 40px;
-                  color: #000;
-                "
-              />
-            </div>
-          </div>
-          <br />
-          <div class="row align-items-center">
-            <div class="col-4">
-              <input
-                type="submit"
-                class="form-control"
-                value="search"
-                style="
-                  background-color: #a9a9a9;
-                  margin-left: 370px;
-                  margin-top: -90px;
-                "
-              />
-            </div>
-          </div>
-        </form>
-      </div>
+      </header>
       <div class="row align-items-center">
         <div class="col">
           <div class="weather-temperature">
@@ -98,29 +100,30 @@
           </div>
         </div>
       </div>
-      <br />
       <div class="weather-forecast" id="forecast"></div>
     </div>
-    <div class="row">
-      <div class="col footer">
-        <footer>
-          <small>
-            <a
-              href="https://github.com/mariamelomaga/my-weather-app"
-              target="_blank"
-            >
-              Open-source code on GitHub</a
-            >
-            and
-            <a
-              href="https://priceless-colden-c88d72.netlify.app/"
-              target="_blank"
-            >
-              hosted on Netlify</a
-            >
-            by Maria Melo
-          </small>
-        </footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <footer>
+            <small>
+              <a
+                href="https://github.com/mariamelomaga/my-weather-app"
+                target="_blank"
+              >
+                Open-source code on GitHub</a
+              >
+              and
+              <a
+                href="https://priceless-colden-c88d72.netlify.app/"
+                target="_blank"
+              >
+                hosted on Netlify</a
+              >
+              by Maria Melo
+            </small>
+          </footer>
+        </div>
       </div>
     </div>
     <script src="src/index.js"></script>
