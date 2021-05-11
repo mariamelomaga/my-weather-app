@@ -36,7 +36,7 @@ footer {
   margin-top: 50px;
   display: block;
   margin: 15px auto;
-  max-width: 540px;
+  max-width: 500px;
   color: #000;
 }
 .search-engine {
@@ -70,8 +70,7 @@ footer {
   text-decoration: none;
 }
 .description {
-  font-size: 15px;
-  font-weight: lighter;
+  font-weight: 550;
 }
 .current-location {
   background: transparent;
