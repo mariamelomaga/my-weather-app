@@ -22,11 +22,15 @@ ul {
   list-style: none;
   padding: 2px;
 }
-
 footer {
-  color: darkgray;
+  background: none !important;
+  margin-top: 40px;
+  font-size: 12px;
   text-align: center;
-  margin-top: -20px;
+}
+footer .footer-links {
+  color: #000;
+  opacity: 0.5;
 }
 .container {
   background: #dddddd;
@@ -40,10 +44,10 @@ footer {
   color: #000;
 }
 .search-engine {
-  margin-top: 25px;
   color: #000;
-  margin-left: 15px;
-  margin-right: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .form-control {
   color: #000;
@@ -52,7 +56,7 @@ footer {
   color: #000;
 }
 .weather-temperature .temperature {
-  font-size: 60px;
+  font-size: 40px;
   font-weight: bolder;
 }
 .weather-temperature img {
@@ -70,7 +74,10 @@ footer {
   text-decoration: none;
 }
 .description {
-  font-weight: 550;
+  font-weight: 700;
+  opacity: 0.8;
+  color: #9b480c;
+  text-transform: uppercase;
 }
 .current-location {
   background: transparent;
@@ -97,12 +104,4 @@ a {
 .weather-forecast-date {
   font-size: 16px;
   opacity: 0.5;
-}
-
-.weather-forecast-temperature-min {
-  opacity: 0.5;
-}
-
-.weather-forecast-temperatures {
-  font-size: 13px;
 }
