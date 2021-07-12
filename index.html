@@ -27,88 +27,79 @@
   </head>
   <body>
     <div class="container">
-      <header class="header">
-        <h1 id="city"></h1>
+      <div class="weather-app-wrapper">
         <div class="row">
-          <div class="col-sm">
-            <h2>
-              <span id="date"></span>
-            </h2>
-            <h3>
-              <ul>
-                <li><span class="description" id="description"></span></li>
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span>km/h</li>
-              </ul>
-            </h3>
-          </div>
-        </div>
-        <div class="search-engine">
-          <div>
-            <button class="current-location-button">
-              <i
-                class="fas fa-map-marker-alt location-icon"
-                id="current-location-button"
-              ></i>
-            </button>
-          </div>
-          <div>
-            <form id="search-form">
-              <input
-                type="search"
-                class="form-control"
-                placeholder="type city"
-                autocomplete="off"
-                autofocus="off"
-                id="city-input"
-                style="
-                  background-color: #f6f5f5;
-                  border: 1px solid #f6f5f5;
-                  color: #000;
-                "
-              />
-            </form>
-          </div>
-          <div>
-            <form>
-              <input
-                type="submit"
-                class="form-control"
-                value="search"
-                style="background-color: #a9a9a9"
-              />
-            </form>
-          </div>
-        </div>
-      </header>
-      <div class="row weather-temperature">
-        <div class="col">
-          <img src="" class="icon-weather" id="icon" />
+          <div class="col">
+            <h1 id="city"></h1>
 
-          <span class="temperature" id="temperature"></span>
-          <span class="units">ºC</span>
+            <h2>
+              <span id="date" class="date"></span>
+            </h2>
+          </div>
+          <form id="search-form">
+            <div class="row search">
+              <div class="col-6">
+                <input
+                  type="search"
+                  class="form-control"
+                  placeholder="type city"
+                  autocomplete="off"
+                  autofocus="off"
+                  id="city-input"
+                />
+              </div>
+              <div class="col-4">
+                <input type="submit" class="form-control" value="search" />
+              </div>
+
+              <button class="current-location-button">
+                <i
+                  class="fas fa-map-marker-alt location-icon"
+                  id="current-location-button"
+                >
+                </i>
+              </button>
+            </div>
+          </form>
         </div>
+
+        <div class="row weather-temperature">
+          <div class="col">
+            <img src="" id="icon" class="float-left" />
+            <span class="temperature" id="temperature"> </span>
+            <span class="units">ºC</span><br />
+          </div>
+          <div class="col">
+            <ul>
+              <li>humidity: <span id="humidity"></span>%</li>
+              <li>wind: <span id="wind"></span>km/h</li>
+              <li><span class="description" id="description"></span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="weather-forecast" id="forecast"></div>
+
+        <footer>
+          <a
+            href="https://github.com/mariamelomaga/my-weather-app"
+            target="_blank"
+            class="footer-links"
+          >
+            Open-source code on GitHub</a
+          >
+          and
+          <a
+            href="https://priceless-colden-c88d72.netlify.app/"
+            target="_blank"
+            class="footer-links"
+          >
+            hosted on Netlify</a
+          >
+          by Maria Melo
+        </footer>
       </div>
-      <div class="weather-forecast" id="forecast"></div>
-      <footer>
-        <a
-          href="https://github.com/mariamelomaga/my-weather-app"
-          target="_blank"
-          class="footer-links"
-        >
-          Open-source code on GitHub</a
-        >
-        and
-        <a
-          href="https://priceless-colden-c88d72.netlify.app/"
-          target="_blank"
-          class="footer-links"
-        >
-          hosted on Netlify</a
-        >
-        by Maria Melo
-      </footer>
+      <script src="src/index.js"></script>
     </div>
-    <script src="src/index.js"></script>
   </body>
 </html>
