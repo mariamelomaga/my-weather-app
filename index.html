@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather app</title>
+    <title>Weather app - Maria Melo</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
@@ -31,13 +31,12 @@
         <div class="row">
           <div class="col">
             <h1 id="city"></h1>
-
             <h2>
               <span id="date" class="date"></span>
             </h2>
           </div>
           <form id="search-form">
-            <div class="row search">
+            <div class="row">
               <div class="col-6">
                 <input
                   type="search"
@@ -48,28 +47,27 @@
                   id="city-input"
                 />
               </div>
-              <div class="col-4">
+              <div class="col-6">
                 <input type="submit" class="form-control" value="search" />
               </div>
-
-              <button class="current-location-button">
-                <i
-                  class="fas fa-map-marker-alt location-icon"
-                  id="current-location-button"
-                >
-                </i>
-              </button>
             </div>
           </form>
+          <button class="current-location-button">
+            <i
+              class="fas fa-map-marker-alt location-icon"
+              id="current-location-button"
+            >
+            </i>
+          </button>
         </div>
 
         <div class="row weather-temperature">
-          <div class="col">
+          <div class="col-sm">
             <img src="" id="icon" class="float-left" />
             <span class="temperature" id="temperature"> </span>
-            <span class="units">ºC</span><br />
+            <span class="units">ºC</span>
           </div>
-          <div class="col">
+          <div class="col-sm">
             <ul>
               <li>humidity: <span id="humidity"></span>%</li>
               <li>wind: <span id="wind"></span>km/h</li>
@@ -77,9 +75,7 @@
             </ul>
           </div>
         </div>
-
         <div class="weather-forecast" id="forecast"></div>
-
         <footer>
           <a
             href="https://github.com/mariamelomaga/my-weather-app"
