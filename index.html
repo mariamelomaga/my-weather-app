@@ -28,8 +28,8 @@
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
-        <div class="row">
-          <div class="col">
+        <div class="weather-app">
+          <div class="overview">
             <h1 id="city"></h1>
             <h2>
               <span id="date" class="date"></span>
@@ -43,59 +43,71 @@
                   class="form-control"
                   placeholder="type city"
                   autocomplete="off"
-                  autofocus="off"
                   id="city-input"
                 />
               </div>
-              <div class="col-6">
+              <div class="col-4">
                 <input type="submit" class="form-control" value="search" />
+              </div>
+              <div class="col-2">
+                <button class="current-location-button mt-2">
+                  <i
+                    class="fas fa-map-marker-alt location-icon"
+                    id="current-location-button"
+                  >
+                  </i>
+                  here
+                </button>
               </div>
             </div>
           </form>
-          <button class="current-location-button">
-            <i
-              class="fas fa-map-marker-alt location-icon"
-              id="current-location-button"
-            >
-            </i>
-          </button>
-        </div>
 
-        <div class="row weather-temperature">
-          <div class="col-sm">
-            <img src="" id="icon" class="float-left" />
-            <span class="temperature" id="temperature"> </span>
-            <span class="units">ºC</span>
+          <div class="row">
+            <div class="col-6 mt-5">
+              <div class="clearfix weather-temperature">
+                <img src="" id="icon" class="float-left" />
+                <div class="float-left">
+                  <span class="temperature" id="temperature"> </span>
+                  <span class="units">ºC</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 mt-5">
+              <ul>
+                <li>humidity: <span id="humidity" class="humidity"></span>%</li>
+                <li>wind: <span id="wind" class="wind"></span>km/h</li>
+                <li><span class="description" id="description"></span></li>
+              </ul>
+            </div>
           </div>
-          <div class="col-sm">
-            <ul>
-              <li>humidity: <span id="humidity"></span>%</li>
-              <li>wind: <span id="wind"></span>km/h</li>
-              <li><span class="description" id="description"></span></li>
-            </ul>
+          <div class="row">
+            <div class="col">
+              <div class="weather-forecast" id="forecast"></div>
+            </div>
           </div>
         </div>
-        <div class="weather-forecast" id="forecast"></div>
-        <footer>
-          <a
-            href="https://github.com/mariamelomaga/my-weather-app"
-            target="_blank"
-            class="footer-links"
-          >
-            Open-source code on GitHub</a
-          >
-          and
-          <a
-            href="https://priceless-colden-c88d72.netlify.app/"
-            target="_blank"
-            class="footer-links"
-          >
-            hosted on Netlify</a
-          >
-          by Maria Melo
-        </footer>
+        <small>
+          <footer>
+            <a
+              href="https://github.com/mariamelomaga/my-weather-app"
+              target="_blank"
+              class="footer-links"
+            >
+              Open-source code on GitHub</a
+            >
+            and
+            <a
+              href="https://priceless-colden-c88d72.netlify.app/"
+              target="_blank"
+              class="footer-links"
+            >
+              hosted on Netlify</a
+            >
+            by Maria Melo
+          </footer>
+        </small>
       </div>
-      <script src="src/index.js"></script>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>

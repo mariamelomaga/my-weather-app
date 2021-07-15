@@ -8,15 +8,18 @@ body {
 }
 
 h1 {
-  font-weight: 600;
   font-size: 40px;
 }
 
 h2 {
   font-size: 22px;
+  opacity: 0.7;
 }
 h3 {
   font-size: 15px;
+}
+button {
+  color: #fff;
 }
 button:hover {
   cursor: cell;
@@ -26,25 +29,29 @@ a {
 }
 ul {
   list-style: none;
+  padding-left: 0;
 }
+
 footer {
   font-size: 12px;
   text-align: center;
   margin-top: 40px;
 }
 footer .footer-links {
-  color: darkgoldenrod;
-  font-weight: bold;
+  color: rgb(133, 88, 53);
 }
-.container {
-  padding: 15px auto;
+.conditions {
+  opacity: 0.6;
+  font-size: 20px;
 }
 .weather-app-wrapper {
-  padding: 60px;
-  border-radius: 25px;
-  margin: 60px auto;
+  margin: 30px auto;
   max-width: 600px;
   background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+.weather-app {
+  padding: 20px;
+  border-radius: 20px;
 }
 .date {
   text-transform: lowercase;
@@ -75,8 +82,9 @@ footer .footer-links {
 .weather-temperature .active:hover {
   text-decoration: none;
 }
-.description {
-  font-size: 19px;
+.humidity,
+.wind {
+  font-size: 15px;
 }
 
 .location-icon {
@@ -89,7 +97,7 @@ footer .footer-links {
 }
 
 .weather-forecast {
-  margin-top: 18px;
+  margin-top: 20px;
   text-align: center;
   color: #000;
 }
@@ -109,17 +117,23 @@ footer .footer-links {
 @media (max-width: 600px) {
   h1 {
     font-size: 30px;
+    padding-left: 0;
   }
   h2 {
     font-size: 18px;
+    padding-left: 0;
   }
   footer {
     font-size: 9px;
   }
-  .description,
-  .temperature {
-    font-size: 15px;
+
+  .weather-app-wrapper {
+    padding: 15px auto;
   }
+  .weather-forecast {
+    font-size: 12px;
+  }
+
   .search-form {
     margin-top: 40px;
   }
